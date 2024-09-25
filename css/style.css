@@ -570,6 +570,10 @@ video {
   visibility: visible;
 }
 
+.relative {
+  position: relative;
+}
+
 .m-4 {
   margin: 1rem;
 }
@@ -617,6 +621,10 @@ video {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -1057,6 +1065,10 @@ video {
 
   .md\:h-\[10\%\] {
     height: 10%;
+  }
+
+  .md\:h-\[26rem\] {
+    height: 26rem;
   }
 
   .md\:w-2\/5 {
