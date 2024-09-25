@@ -131,7 +131,7 @@
             width: 14ch; 
             /* Define el ancho del span en función de 25 caracteres que tiene el mensaje*/
 
-            animation: typing 6s steps(12) infinite, blink .5s infinite step-end alternate; 
+            animation: typing 3s steps(12) infinite, blink .5s infinite step-end alternate; 
             /* Aplica las animaciones de escritura y parpadeo */
 
             overflow: hidden; 
@@ -159,7 +159,10 @@ background: linear-gradient(108deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
     }
   }
   .background {
-    background-image: url('img/fondo2-01.jpg'); /* Ruta de la imagen de fondo */
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     background-size: cover; /* Hace que la imagen cubra todo el tamaño del div */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el div */
@@ -169,7 +172,10 @@ background: linear-gradient(108deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
 
 @media (max-width: 768px) { 
 .background{
-    background-image: url('img/fondo2-01.jpg'); /* Ruta de la imagen de fondo */
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     background-size: cover; /* Hace que la imagen cubra todo el tamaño del div */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen en el div */
