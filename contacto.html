@@ -261,142 +261,70 @@
       float: right;
     }
 
-    /* Media Queries para Responsividad */
-    @media (max-width: 768px) {
-      .form_wrap {
-        flex-direction: column;
-        /* Cambia a columna en pantallas pequeñas */
-        height: auto;
-        /* Altura automática para mejor ajuste */
-      }
-
-      .cantact_info {
-        width: 100%;
-        /* Ocupa todo el ancho */
-        height: 200px;
-        /* Ajustar altura según sea necesario */
-      }
-
-      .form_contact {
-        width: 100%;
-        /* Ocupa todo el ancho */
-        padding: 20px;
-        /* Reduce el padding */
-      }
-
-      .info_title span {
-        font-size: 60px;
-        /* Ajusta el tamaño del texto */
-      }
-
-      .info_title h2 {
-        font-size: 24px;
-        /* Ajusta el tamaño del texto */
-      }
-
-      form.form_contact h2 {
-        font-size: 20px;
-        /* Ajusta el tamaño del texto */
-      }
-
-      form.form_contact input[type="button"] {
-        width: 100%;
-        /* Botón ocupa todo el ancho */
-        margin-top: 10px;
-        /* Agrega margen superior */
-      }
-
-      .mensaje_modal {
-        width: 90%;
-        /* Ajusta el ancho de la modal en pantallas pequeñas */
-      }
-    }
-
     .tabla h1 {
-      display: block;
-      /* Hace que el span se comporte como un bloque */
+            display: block; /* Hace que el span se comporte como un bloque */
 
-      white-space: nowrap;
-      /* Impide que el texto se divida en varias líneas manteniéndo siempre una sola línea */
+            white-space: nowrap; 
+            /* Impide que el texto se divida en varias líneas manteniéndo siempre una sola línea */
 
-      border-right: 4px solid;
-      /* Agrega una barra vertical al final del texto */
+            border-right: 4px solid; 
+            /* Agrega una barra vertical al final del texto */
 
-      width: 14ch;
-      /* Define el ancho del span en función de 25 caracteres que tiene el mensaje*/
+            width: 14ch; 
+            /* Define el ancho del span en función de 25 caracteres que tiene el mensaje*/
 
-      animation: typing 3s steps(12) infinite, blink .5s infinite step-end alternate;
-      /* Aplica las animaciones de escritura y parpadeo */
+            animation: typing 3s steps(12) infinite, blink .5s infinite step-end alternate; 
+            /* Aplica las animaciones de escritura y parpadeo */
 
-      overflow: hidden;
-      /* Oculta el contenido que desborda */
+            overflow: hidden; 
+             /* Oculta el contenido que desborda */
+        }
+
+        /*Aquí definimos los estilos que usamos arriba*/
+        @keyframes typing {
+            from {
+                width: 0; 
+                /* Inicia la animación desde un ancho de 0 */
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent; 
+                /* Hace que el borde parpadee (sea transparente el 50% del tiempo) */
+            }
+        }
+  @media (min-width: 768px) { /* Para pantallas más grandes */
+    .color {
+      background: rgb(255,255,255) !important;
+background: linear-gradient(108deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 52%, rgba(58,115,202,1) 52%, rgba(0,60,149,1) 100%) !important;
     }
+  }
+  .background {
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    /*Aquí definimos los estilos que usamos arriba*/
-    @keyframes typing {
-      from {
-        width: 0;
-        /* Inicia la animación desde un ancho de 0 */
-      }
-    }
+    background-size: cover; /* Hace que la imagen cubra todo el tamaño del div */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el div */
+    width: 100%; /* Asegura que tome todo el ancho */
+    height: 36rem; /* Asegura que tome todo el alto de la pantalla visible */
+}
 
-    @keyframes blink {
-      50% {
-        border-color: transparent;
-        /* Hace que el borde parpadee (sea transparente el 50% del tiempo) */
-      }
-    }
+@media (max-width: 1130px) { 
+.background{
+    background: #0575E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    @media (min-width: 768px) {
-
-      /* Para pantallas más grandes */
-      .color {
-        background: rgb(255, 255, 255) !important;
-        background: linear-gradient(108deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(58, 115, 202, 1) 52%, rgba(0, 60, 149, 1) 100%) !important;
-      }
-    }
-
-    .background {
-      background: #0575E6;
-      /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-      /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #021B79, #0575E6);
-      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-      background-size: cover;
-      /* Hace que la imagen cubra todo el tamaño del div */
-      background-repeat: no-repeat;
-      /* Evita que la imagen se repita */
-      background-position: center;
-      /* Centra la imagen en el div */
-      width: 100%;
-      /* Asegura que tome todo el ancho */
-      height: 36rem;
-      /* Asegura que tome todo el alto de la pantalla visible */
-    }
-
-    @media (max-width: 868px) {
-      .background {
-        background: #0575E6;
-        /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #021B79, #0575E6);
-        /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #021B79, #0575E6);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-        background-size: cover;
-        /* Hace que la imagen cubra todo el tamaño del div */
-        background-repeat: no-repeat;
-        /* Evita que la imagen se repita */
-        background-position: center;
-        /* Centra la imagen en el div */
-        width: 100%;
-        /* Asegura que tome todo el ancho */
-        height: 100%;
-        /* Asegura que tome todo el alto de la pantalla visible */
-      }
-    }
+    background-size: cover; /* Hace que la imagen cubra todo el tamaño del div */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el div */
+    width: 100%; /* Asegura que tome todo el ancho */
+    height: 100%; /* Asegura que tome todo el alto de la pantalla visible */
+}
+}
 
     .fab {
       padding: 10px;
@@ -508,79 +436,49 @@
     </section>
 
   </section>
-  <!--FOOTER-->
-  <div class="bg-gray-200 pt-4 mt-8 pb-8">
-    <div class="flex justify-center items-center">
-      <img src="img/logocolor.webp" alt="logo" class="h-[5rem] object-cover">
-    </div>
-
-    <div class="max-w-full lg:max-w-[85%] m-auto grid md:grid-cols-3">
-      <div class="md:pt-0 pt-5 flex md:flex-row flex-col items-center md:justify-start justify-center gap-3">
+ <!--FOOTER-->
+<div class="bg-gray-200 pt-4 mt-8 pb-8 md:px-3">
+  <div class="flex md:justify-start  justify-center items-center">
+    <img src="img/logocolor.webp" alt="logo" class="h-[5rem] object-cover">
+  </div>
+  
+  <div class="max-w-full lg:max-w-[85%] m-auto grid md:grid-cols-3">
+      <div class="md:pt-0 pt-5 flex md:flex-row flex-col md:justify-start items-center md:items-start justify-center">
         <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="#636466" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-          </svg>
-
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="#636466"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+       
         </div>
-        <div>
-          <h3 class="text-gray-600 text-center">Contactanos</h3>
+        <div> 
+          <h3 class="text-gray-600 text-center">Contactanos</h3> 
           <a href="https://w.app/cOtDjI" class="text-gray-600 block py-2 px-3 md:p-1">+58-414-8615822</a>
           <a href="https://w.app/thecorptech" class="text-gray-600 block py-2 px-3 md:p-1">+58-414-8610928</a>
         </div>
       </div>
 
-      <div class="pt-5 flex flex-col justify-center">
-        <a href="index.html"
-          class="text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Inicio</a>
-        <a href="quienessomos.html"
-          class="text-center md:text-left  block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Quienes
-          somos</a>
-        <a href="servicios.html"
-          class=" text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Servicios</a>
-        <a href="aliados.html"
-          class="text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Nuestros
-          aliados</a>
-        <a href="#"
-          class="text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Contactanos</a>
+      <div class="flex flex-col justify-center">
+        <a href="index.html" class="text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Inicio</a>
+        <a href="quienessomos.html" class="text-center md:text-left  block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Quienes somos</a>
+        <a href="servicios.html" class=" text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Servicios</a>
+        <a href="aliados.html" class="text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Nuestros aliados</a>
+        <a href="contacto.html" class="text-center md:text-left block py-2 px-3 text-gray-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-1">Contactanos</a>
       </div>
 
       <div class="flex justify-center items-center pt-5 gap-4 md:p-0">
         <a href="https://www.instagram.com/saintpzo" class="block p-2 bg-white rounded">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
-            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-            <path d="M16.5 7.5l0 .01" />
-          </svg>
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>
         </a>
         <a href="https://youtu.be/GCl1ZDMziqg?si=t9vg9s7YK-sPhunP" class="block p-2 bg-white rounded">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-            class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" />
-          </svg>
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" /></svg>
         </a>
 
         <a href="https://www.facebook.com/Saintpzo?mibextid=ZbWKwL" class="block p-2 bg-white rounded">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-            class="icon icon-tabler icons-tabler-filled icon-tabler-brand-facebook">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" />
-          </svg>
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 2a1 1 0 0 1 .993 .883l.007 .117v4a1 1 0 0 1 -.883 .993l-.117 .007h-3v1h3a1 1 0 0 1 .991 1.131l-.02 .112l-1 4a1 1 0 0 1 -.858 .75l-.113 .007h-2v6a1 1 0 0 1 -.883 .993l-.117 .007h-4a1 1 0 0 1 -.993 -.883l-.007 -.117v-6h-2a1 1 0 0 1 -.993 -.883l-.007 -.117v-4a1 1 0 0 1 .883 -.993l.117 -.007h2v-1a6 6 0 0 1 5.775 -5.996l.225 -.004h3z" /></svg>
         </a>
-
+        
 
       </div>
-    </div>
   </div>
+</div>
 </body>
 
 </html>
