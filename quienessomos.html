@@ -9,7 +9,9 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-
+  <a href="https://w.app/cOtDjI" target="_blank" class="whatsapp-button animate-pulse">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="w-8 h-8">
+  </a>
 <!--Menu-->
 <nav class="bg-gray-200 border-gray-200 m-auto">
     <div class="max-w-full lg:max-w-[85%] flex flex-wrap items-center justify-between mx-auto p-3">
@@ -199,6 +201,46 @@ background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, F
     height: 100%; /* Asegura que tome todo el alto de la pantalla visible */
 }
 }
+
+.whatsapp-button {
+    position: fixed; /* Para que sea flotante */
+    bottom: 20px; /* Ubicación desde la parte inferior */
+    right: 20px; /* Ubicación desde la parte derecha */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    background-color: #25D366; /* Color de fondo de WhatsApp */
+    border-radius: 50%; /* Botón redondo */
+    display: flex;
+    justify-content: center; /* Centra el icono horizontalmente */
+    align-items: center; /* Centra el icono verticalmente */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 1000; /* Para que esté por encima de otros elementos */
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1); /* Agranda el botón ligeramente al pasar el mouse */
+  }
+
+  .whatsapp-button img {
+    width: 32px; /* Tamaño del icono */
+    height: 32px;
+  }
+
+  /* Animación de palpitación */
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
   </style>
   <script src="js/script.js"></script>
 </body>
