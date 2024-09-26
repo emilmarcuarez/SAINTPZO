@@ -261,70 +261,144 @@
       float: right;
     }
 
-    .tabla h1 {
-            display: block; /* Hace que el span se comporte como un bloque */
+    /* Media Queries para Responsividad */
+    @media (max-width: 768px) {
+      .form_wrap {
+        flex-direction: column;
+        /* Cambia a columna en pantallas pequeñas */
+        height: auto;
+        /* Altura automática para mejor ajuste */
+      }
 
-            white-space: nowrap; 
-            /* Impide que el texto se divida en varias líneas manteniéndo siempre una sola línea */
+      .cantact_info {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        height: 200px;
+        /* Ajustar altura según sea necesario */
+      }
 
-            border-right: 4px solid; 
-            /* Agrega una barra vertical al final del texto */
+      .form_contact {
+        width: 100%;
+        /* Ocupa todo el ancho */
+        padding: 20px;
+        /* Reduce el padding */
+      }
 
-            width: 14ch; 
-            /* Define el ancho del span en función de 25 caracteres que tiene el mensaje*/
+      .info_title span {
+        font-size: 60px;
+        /* Ajusta el tamaño del texto */
+      }
 
-            animation: typing 3s steps(12) infinite, blink .5s infinite step-end alternate; 
-            /* Aplica las animaciones de escritura y parpadeo */
+      .info_title h2 {
+        font-size: 24px;
+        /* Ajusta el tamaño del texto */
+      }
 
-            overflow: hidden; 
-             /* Oculta el contenido que desborda */
-        }
+      form.form_contact h2 {
+        font-size: 20px;
+        /* Ajusta el tamaño del texto */
+      }
 
-        /*Aquí definimos los estilos que usamos arriba*/
-        @keyframes typing {
-            from {
-                width: 0; 
-                /* Inicia la animación desde un ancho de 0 */
-            }
-        }
+      form.form_contact input[type="button"] {
+        width: 100%;
+        /* Botón ocupa todo el ancho */
+        margin-top: 10px;
+        /* Agrega margen superior */
+      }
 
-        @keyframes blink {
-            50% {
-                border-color: transparent; 
-                /* Hace que el borde parpadee (sea transparente el 50% del tiempo) */
-            }
-        }
-  @media (min-width: 768px) { /* Para pantallas más grandes */
-    .color {
-      background: rgb(255,255,255) !important;
-background: linear-gradient(108deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 52%, rgba(58,115,202,1) 52%, rgba(0,60,149,1) 100%) !important;
+      .mensaje_modal {
+        width: 90%;
+        /* Ajusta el ancho de la modal en pantallas pequeñas */
+      }
     }
-  }
-  .background {
-    background: #0575E6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    background-size: cover; /* Hace que la imagen cubra todo el tamaño del div */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
-    width: 100%; /* Asegura que tome todo el ancho */
-    height: 36rem; /* Asegura que tome todo el alto de la pantalla visible */
-}
+    .tabla h1 {
+      display: block;
+      /* Hace que el span se comporte como un bloque */
 
-@media (max-width: 1130px) { 
-.background{
-    background: #0575E6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      white-space: nowrap;
+      /* Impide que el texto se divida en varias líneas manteniéndo siempre una sola línea */
 
-    background-size: cover; /* Hace que la imagen cubra todo el tamaño del div */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en el div */
-    width: 100%; /* Asegura que tome todo el ancho */
-    height: 100%; /* Asegura que tome todo el alto de la pantalla visible */
-}
-}
+      border-right: 4px solid;
+      /* Agrega una barra vertical al final del texto */
+
+      width: 14ch;
+      /* Define el ancho del span en función de 25 caracteres que tiene el mensaje*/
+
+      animation: typing 3s steps(12) infinite, blink .5s infinite step-end alternate;
+      /* Aplica las animaciones de escritura y parpadeo */
+
+      overflow: hidden;
+      /* Oculta el contenido que desborda */
+    }
+
+    /*Aquí definimos los estilos que usamos arriba*/
+    @keyframes typing {
+      from {
+        width: 0;
+        /* Inicia la animación desde un ancho de 0 */
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+        /* Hace que el borde parpadee (sea transparente el 50% del tiempo) */
+      }
+    }
+
+    @media (min-width: 768px) {
+
+      /* Para pantallas más grandes */
+      .color {
+        background: rgb(255, 255, 255) !important;
+        background: linear-gradient(108deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 52%, rgba(58, 115, 202, 1) 52%, rgba(0, 60, 149, 1) 100%) !important;
+      }
+    }
+
+    .background {
+      background: #0575E6;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #021B79, #0575E6);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      background-size: cover;
+      /* Hace que la imagen cubra todo el tamaño del div */
+      background-repeat: no-repeat;
+      /* Evita que la imagen se repita */
+      background-position: center;
+      /* Centra la imagen en el div */
+      width: 100%;
+      /* Asegura que tome todo el ancho */
+      height: 36rem;
+      /* Asegura que tome todo el alto de la pantalla visible */
+    }
+
+    @media (max-width: 868px) {
+      .background {
+        background: #0575E6;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #021B79, #0575E6);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        background-size: cover;
+        /* Hace que la imagen cubra todo el tamaño del div */
+        background-repeat: no-repeat;
+        /* Evita que la imagen se repita */
+        background-position: center;
+        /* Centra la imagen en el div */
+        width: 100%;
+        /* Asegura que tome todo el ancho */
+        height: 100%;
+        /* Asegura que tome todo el alto de la pantalla visible */
+      }
+    }
+
+    
 
     .fab {
       padding: 10px;
